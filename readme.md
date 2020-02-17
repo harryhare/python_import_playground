@@ -29,13 +29,13 @@
 
 * PyCharm
 
-    - 右键标记根目录是source root， 然后import 后面的路径要从这个source root 起的路径
+    - 右键标记根目录是source root， 然后import 后面的路径要从这个 source root 起的路径
     - 自建package 只要 引用对了就可以。
     - 依赖库 由于和python 的环境变量绑定，所以只要设置好 python的编译环境即可。
 
 * 命令行
-
-    - 设置PYTHONPATH
+    - 如果入口脚本在外层，也就是 source root 下面，那么直接运行即可
+    - 如果脚本入口不直接在 source root 下面，设置环境变量 PYTHONPATH 为 source root 
 
 ### 和其他语言比较
 
@@ -62,6 +62,8 @@
     - 不过，mess up 系统路径，可能导致各种奇怪的问题，似乎并且没有版本管理系统
 
 
-### 参考：
+### 参考
+
 1.https://www.cnblogs.com/yinzhengjie/p/8587656.html
+
 2.https://www.jianshu.com/p/ca469f693c31
