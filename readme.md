@@ -8,19 +8,21 @@
 
 ### 包
 
-包和普通目录的区别只是包多了个`__init__.py` 文件。
+- 包和普通目录的区别只是包多了个`__init__.py` 文件。
 
-有了这个文件后，在import 时则可以用目录名，而不是直接引用文件名。
+- 有了这个文件后，在import 时则可以用目录名，而不是直接引用文件名。
 
-同时 import 后，只有`__init__.py` 文件中定义/import的东西才能在包外被引用，有点封装/头文件的意思。
+- 同时 import 后，只有`__init__.py` 文件中定义/import的东西才能在包外被引用，有点封装/头文件的意思。
 
-所以如果package 路径下有其他文件，
+- 所以如果package 路径下有其他文件，
 
-一个办法是在 `__init__.py`  import 这些文件；
+- 一个办法是在 `__init__.py`  import 这些文件；
 
-另一个办法是 `__all__=["pyfile_name","function_name","varible_name"]`
+- 另一个办法是 `__all__=["pyfile_name","function_name","varible_name"]`
 
-`__all__`只对 `from xxx import *` 形式的import 有效
+- `__all__`只对 `from xxx import *` 形式的import 有效
+
+- 如果没有定义`__all__` 则文件`__init__.py`中的所有都对外可见。如果定义了，则只有在列表中出现的对外可见
 
 
 ### 运行
